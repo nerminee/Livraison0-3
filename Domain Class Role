@@ -1,0 +1,24 @@
+package taskmanagement1.secu
+
+class Role {
+	
+	String authority
+	static hasMany = [users: User]
+	static mapping = {
+		cache true
+	}
+
+	static constraints = {
+		authority blank: false, unique: true
+	}
+	
+	String toString() {
+		"$authority"
+   }
+	
+	
+	
+	
+}
+
+
